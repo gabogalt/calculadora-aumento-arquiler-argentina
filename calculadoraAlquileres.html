@@ -59,13 +59,13 @@
   
 	<div class="input-group mb-3">
 	  
-	<input style="width: 100%" type="date" value="2021-04-15" id="fechaInicial" name="fechaInicial" min="2020-07-01" max="2022-04-30">
+	<input style="width: 100%" type="date" value="2021-05-15" id="fechaInicial" name="fechaInicial" min="2020-07-01" max="2022-05-16">
 	  
 	</div>
   
 	<div class="input-group mb-3">
 	
-	<input style="width: 100%" type="date" value="2022-04-15" id="fechaActual" name="fechaActual" min="2020-07-01" max="2022-04-30">
+	<input style="width: 100%" type="date" value="2022-05-1" id="fechaActual" name="fechaActual" min="2020-07-01" max="2022-05-16">
 	</div>
   
   
@@ -740,6 +740,34 @@
                                 
                                 return icl.toFixed(2);
                             break;
+
+							case '05': 
+
+								if((dia > 0) && (dia < 3)){
+									icl = 1.97;
+								}else{
+									if ((dia > 2) && (dia<6)) {
+										icl=1-98;
+									} else {
+										if ((dia > 5) && ( dia < 9)) {
+											icl = 1.99;
+										} else {
+											if ((dia>8) && (dia<12)) {
+												icl=2.00
+											} else {
+												if ((dia>11) && (dia<16)) {
+													icl=2.01
+												} else {
+													icl=2.02
+												}
+											} 
+										} 
+									}
+								}
+
+								return icl.toFixed(2);
+							break;
+
 						}
   
 					  }
