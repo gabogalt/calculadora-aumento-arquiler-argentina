@@ -59,13 +59,13 @@
   
 	<div class="input-group mb-3">
 	  
-	<input style="width: 100%" type="date" value="2021-05-15" id="fechaInicial" name="fechaInicial" min="2020-07-01" max="2022-05-16">
+	<input style="width: 100%" type="date" value="2021-06-01" id="fechaInicial" name="fechaInicial" min="2020-07-01" max="2022-06-16">
 	  
 	</div>
   
 	<div class="input-group mb-3">
 	
-	<input style="width: 100%" type="date" value="2022-05-01" id="fechaActual" name="fechaActual" min="2020-07-01" max="2022-05-16">
+	<input style="width: 100%" type="date" value="2022-06-01" id="fechaActual" name="fechaActual" min="2020-07-01" max="2022-06-16">
 	</div>
   
   
@@ -758,13 +758,74 @@
 												if ((dia>11) && (dia<16)) {
 													icl=2.01
 												} else {
-													icl=2.02
+													if ((dia>15) && (dia<18)){
+														icl=2.02
+													}else{
+														if ((dia>17) && (dia<20)){
+															icl=2.03
+														}else{
+															if ((dia>19) && (dia<22)){
+																icl=2.04
+															}else{
+																if ((dia>21) && (dia<25)){
+																	icl=2.05
+																}else{
+																	if ((dia>24) && (dia<27)){
+																		icl=2.06
+																	}else{
+																		if ((dia>26) && (dia<29)){
+																			icl=2.07
+																		}else{
+																			if ((dia>28) && (dia<31)){
+																				icl=2.08	
+																			}else{
+																				icl=2.09
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
 												}
 											} 
 										} 
 									}
 								}
 
+								return icl.toFixed(2);
+							break;
+
+							case '06': 
+								if ((dia == 1)) {
+									icl=2.09
+								} else {
+									if ((dia>1) && (dia<4)){
+										icl=2.10
+									}else{
+										if ((dia>3) && (dia<6)){
+											icl=2.11
+										}else{
+											if ((dia>5) && (dia<8)){
+												icl=2.12
+											}else{
+												if ((dia>7) && (dia<10)){
+													icl=2.13
+												}else{
+													if ((dia>9) && (dia<12)){
+														icl=2.14
+													}else{
+														if ((dia>11) && (dia<15)){
+															icl=2.15
+														}else{
+															icl=2.16
+														}
+													}
+												}
+											}
+										}
+									}
+								}
 								return icl.toFixed(2);
 							break;
 
@@ -809,13 +870,6 @@
 		  const  actualContrato = document.createTextNode(fechaActual);
 		  const  iclAct = document.createTextNode(iclActual);
 		  const  monto = document.createTextNode(montoInicio);
-  
-  
-		  
-		  
-  
-		   
-		 
   
 		  const element = document.getElementById("montoAct");
 		  element.appendChild(aumento);
