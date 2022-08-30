@@ -58,14 +58,13 @@
   
   
 	<div class="input-group mb-3">
-	  
-	<input style="width: 100%" type="date" value="2021-07-01" id="fechaInicial" name="fechaInicial" min="2020-07-01" max="2022-08-16">
-	  
+		<label for="fechaInicial">Desde</label>
+		<input style="width: 100%" type="date" value="2021-07-01" id="fechaInicial" name="fechaInicial" min="2020-07-01" max="2022-09-16">
 	</div>
   
 	<div class="input-group mb-3">
-	
-	<input style="width: 100%" type="date" value="2022-08-01" id="fechaActual" name="fechaActual" min="2020-07-01" max="2022-08-16">
+		<label for="fechaActual">Hasta</label>
+		<input style="width: 100%" type="date" value="2022-08-01" id="fechaActual" name="fechaActual" min="2020-07-01" max="2022-09-16">
 	</div>
   
   
@@ -112,9 +111,8 @@
 		  
 		  let iclActualF = parseFloat(iclActual);
 		  
-  
-		  let valorActual = ((valorInicialF*iclActualF)/iclInicialF).toFixed(2);
-		  return valorActual;
+		let valorActual = ((valorInicialF*iclActualF)/iclInicialF).toFixed(2);
+		return valorActual; 
 	  }
   
 	  const icl = (año,mes,dia)=>{
@@ -920,7 +918,69 @@
 												if ((dia>12) && (dia<15)){
 													icl=2.39
 												}else{
-													icl=2.40
+													if ((dia>14) && (dia<18)){
+														icl=2.40
+													}else{
+														if ((dia>17) && (dia<20)){
+															icl=2.41
+														}else{
+															if ((dia>19) && (dia<23)){
+																icl=2.42
+															}else{
+																if ((dia>22) && (dia<25)){
+																	icl=2.43
+																}else{
+																	if ((dia>24) && (dia<28)){
+																		icl=2.44
+																	}else{
+																		if ((dia>27) && (dia<29)){
+																			icl=2.45
+																		}else{
+																			icl=2.46
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+
+								return icl.toFixed(2);
+							break;
+
+							case '09':
+								if ((dia>0) && (dia<4)){
+									icl=2.35
+								}else{
+									if ((dia>3) && (dia<4)){
+										icl=2.47
+									}else{
+										if ((dia>3) && (dia<6)){
+											icl=2.48
+										}else{
+											if ((dia>5) && (dia<8)){
+												icl=2.49
+											}else{
+												if ((dia>7) && (dia<11)){
+													icl=2.50
+												}else{
+													if ((dia>10) && (dia<13)){
+														icl=2.51
+													}else{
+														if ((dia>12) && (dia<15)){
+															icl=2.52
+														}else{
+															if ((dia>14) && (dia<17)){
+																icl=2.53
+															}else{
+																icl = 0;
+															}
+														}
+													}
 												}
 											}
 										}
@@ -943,9 +1003,9 @@
 		let fechaActual = document.getElementById("fechaActual").value;
 		let montoInicio = document.getElementById("montoInicio").value;
   
-  if(!montoInicio || isNaN(montoInicio)){
-  montoInicio=0;
-  }
+		if(!montoInicio || isNaN(montoInicio)){
+		montoInicio=0;
+		}
 		
   
 	
@@ -964,6 +1024,9 @@
   
 		  const aumentoContrado = incrementoContrato(montoInicio, iclInicial, iclActual);
 		  
+		  if(!aumentoContrado || isNaN(aumentoContrado)){
+				aumentoContrado=0;
+			}
 		  
 		  const aumento = document.createTextNode(aumentoContrado);
 		  const  inicioContrato = document.createTextNode(fechaInicial);
