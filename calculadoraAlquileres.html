@@ -44,7 +44,7 @@
 </head>
 
 <body data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1
-	data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1>
+	data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1>
 
 	<form>
 
@@ -65,14 +65,14 @@
 
 		<div class="input-group mb-3">
 			<label for="fechaInicial">Desde</label>
-			<input style="width: 100%" type="date" value="2021-07-01" id="fechaInicial" name="fechaInicial"
-				min="2020-07-01" max="2022-10-16">
+			<input style="width: 100%" type="date" value="2021-12-01" id="fechaInicial" name="fechaInicial"
+				min="2020-07-01" max="2022-12-16">
 		</div>
 
 		<div class="input-group mb-3">
 			<label for="fechaActual">Hasta</label>
-			<input style="width: 100%" type="date" value="2022-10-01" id="fechaActual" name="fechaActual"
-				min="2020-07-01" max="2022-10-16">
+			<input style="width: 100%" type="date" value="2022-12-01" id="fechaActual" name="fechaActual"
+				min="2020-07-01" max="2022-12-16">
 		</div>
 
 
@@ -1059,7 +1059,158 @@
 														if ((dia > 14) && (dia < 17)) {
 															icl = 2.69
 														} else {
-															icl = 0
+															if ((dia > 16) && (dia < 19)) {
+																icl = 2.70
+															} else {
+																if ((dia > 18) && (dia < 21)) {
+																	icl = 2.71
+																} else {
+																	if ((dia > 20) && (dia < 23)) {
+																		icl = 2.72
+																	} else {
+																		if ((dia > 22) && (dia < 25)) {
+																			icl = 2.73
+																		} else {
+																			if ((dia > 24) && (dia < 27)) {
+																				icl = 2.74
+																			} else {
+																				if ((dia > 26) && (dia < 29)) {
+																					icl = 2.75
+																				} else {
+																					if ((dia > 28) && (dia < 31)) {
+																						icl = 2.76
+																					} else {
+																						icl = 2.77
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						return icl.toFixed(2);
+						break;
+
+					case '11':
+						if (dia == 1) {
+							icl = 2.77
+						} else {
+							if ((dia > 1) && (dia < 4)) {
+								icl = 2.78
+							} else {
+								if ((dia > 3) && (dia < 6)) {
+									icl = 2.79
+								} else {
+									if ((dia > 5) && (dia < 8)) {
+										icl = 2.80
+									} else {
+										if ((dia > 7) && (dia < 10)) {
+											icl = 2.81
+										} else {
+											if ((dia > 9) && (dia < 12)) {
+												icl = 2.81
+											} else {
+												if ((dia > 11) && (dia < 14)) {
+													icl = 2.83
+												} else {
+													if ((dia > 13) && (dia < 16)) {
+														icl = 2.84
+													} else {
+														if ((dia > 15) && (dia < 18)) {
+															icl = 2.85
+														} else {
+															if ((dia > 17) && (dia < 20)) {
+																icl = 2.86
+															} else {
+																if ((dia > 19) && (dia < 21)) {
+																	icl = 2.87
+																} else {
+																	if ((dia > 20) && (dia < 23)) {
+																		icl = 2.88
+																	} else {
+																		if ((dia > 22) && (dia < 25)) {
+																			icl = 2.89
+																		} else {
+																			if ((dia > 24) && (dia < 26)) {
+																				icl = 2.90
+																			} else {
+																				if ((dia > 25) && (dia < 28)) {
+																					icl = 2.91
+																				} else {
+																					if ((dia > 27) && (dia < 30)) {
+																						icl = 2.92
+																					} else {
+																						if (dia == 30) {
+																							icl = 2.93
+																						} else {
+																							icl = 0
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+						return icl.toFixed(2);
+						break;
+
+					case '12':
+						if (dia == 1) {
+							icl = 2.93
+						} else {
+							if ((dia > 1) && (dia < 3)) {
+								icl = 2.94
+							} else {
+								if ((dia > 2) && (dia < 5)) {
+									icl = 2.95
+								} else {
+									if ((dia > 4) && (dia < 7)) {
+										icl = 2.96
+									} else {
+										if ((dia > 6) && (dia < 8)) {
+											icl = 2.97
+										} else {
+											if ((dia > 7) && (dia < 10)) {
+												icl = 2.98
+											} else {
+												if ((dia > 9) && (dia < 12)) {
+													icl = 2.99
+												} else {
+													if ((dia > 11) && (dia < 13)) {
+														icl = 3.0
+													} else {
+														if ((dia > 12) && (dia < 15)) {
+															icl = 3.01
+														} else {
+															if ((dia > 14) && (dia < 16)) {
+																icl = 3.02
+															} else {
+																if ((dia > 15) && (dia < 17)) {
+																	icl = 3.03
+																} else {
+																	icl = 0
+																}
+															}
 														}
 													}
 												}
