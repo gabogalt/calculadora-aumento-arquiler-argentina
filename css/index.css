@@ -1,0 +1,13 @@
+body {
+    background: #eee;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header {
+    background: none !important;
+}

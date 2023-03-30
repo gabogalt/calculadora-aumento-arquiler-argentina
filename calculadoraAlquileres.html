@@ -6,54 +6,57 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Calculadora de Alquileres</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/index.css">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	<script  src="./index.js"></script>
+	<script  src="./js/index.js"></script>
 </head>
 	<body>
-		<div class="container d-flex justify-content-center align-items-center" style=" width: 100%; max-height: 100%; height: 100% !important; background: #eee!important;">
-			<div class="card  w-75 shadow-lg p-3 mb-5 bg-body rounded">
-				<div class="card-header">
-					<h5>Calculadora de Alquileres</h5>
-				</div>
-				<div class="card-body ">
-					<form action="#" class="m-3">
-						<div class="row">
-							<div class="col-md-12 mb-3">
-								<div class="input-group">
-									<span class="input-group-text">$</span>
-									<input class="form-control"  type="text" placeholder="Monto inicial.   " id="initialMount" name="initialMount" required="">
-								</div>
-								<span class="text-muted mb-3">Los numeros decimales se ingresan con  '' . '' ej. monto 23500.53</span>
-
-							</div>
-						</div>
-				
-						<div class="row">
-							<div class="col-md-6">
-								<div class="mb-3">
-									<label for="initialDate text-center">Desde</label>
-									<input class="form-control" type="date" value="2022-03-16" id="initialDate" name="initialDate" min="2020-07-01" max="2023-04-16">
-								</div>
-							</div>
-				
-							<div class="col-md-6">
-								<div class="mb-3">
-									<label for="currentDate">Hasta</label>
-									<input class="form-control" type="date" value="2023-03-16" id="currentDate" name="currentDate" min="2020-07-01" max="2023-04-16">	
-								</div>
-							</div>
-						</div>
-					</form>
-					<div class="text-end">
-						<!-- Button trigger modal -->
-						<button type="button" class="btn btn-primary" data-bs-toggle="modal" id="btnModal2" data-bs-target="#exampleModal">
-							Realizar Calculo
-						</button>
+		<div class="container " id="item">
+			<div class="row vh-100">
+				<div class="card   w-75 shadow-lg p-3 mb-5 bg-body rounded">
+					<div class="card-header">
+						<h5>Calculadora de Alquileres</h5>
 					</div>
+					<div class="card-body ">
+						<form action="#" class="m-3">
+							<div class="row">
+								<div class="col-md-12 mb-3">
+									<div class="input-group">
+										<span class="input-group-text">$</span>
+										<input class="form-control"  type="text" placeholder="Monto inicial.   " id="initialMount" name="initialMount" required="">
+									</div>
+									<span class="text-muted mb-3">Los numeros decimales se ingresan con  '' . '' ej. monto 23500.53</span>
+	
+								</div>
+							</div>
+					
+							<div class="row">
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label for="initialDate text-center">Desde</label>
+										<input class="form-control" type="date" value="2022-03-16" id="initialDate" name="initialDate" min="2020-07-01" max="2023-04-16">
+									</div>
+								</div>
+					
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label for="currentDate">Hasta</label>
+										<input class="form-control" type="date" value="2023-03-16" id="currentDate" name="currentDate" min="2020-07-01" max="2023-04-16">	
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="text-end">
+							<!-- Button trigger modal -->
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" id="btnModal2" data-bs-target="#exampleModal">
+								Realizar Calculo
+							</button>
+						</div>
+					</div>
+					
 				</div>
-				
 			</div>
-
+			
 			<!-- Modal -->
 			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-lg">
